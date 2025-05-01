@@ -1,8 +1,7 @@
 
 # Scientific Calculator
 
-## Demo
-
-https://scientific-calculator.onrender.com
+##Live
+https://smart-calci.vercel.app/
 
 
