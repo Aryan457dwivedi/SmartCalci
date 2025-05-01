@@ -1,21 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  scrollbar-width: none; /*for Firefox */
+  scrollbar-width: none; /* Firefox */
 }
+
 ::-webkit-scrollbar {
   width: 0;
 }
+
 .calDiv {
   width: 23rem;
   padding: 0.6rem;
   max-height: 100%;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
   box-shadow: 0rem 0rem 0.25rem 0.0625rem grey;
 }
+
 .calDiv__btn {
   background-color: white;
   height: 2.5rem;
@@ -25,39 +44,46 @@
   white-space: nowrap;
   border-radius: 0;
 }
-:where(.calDiv__btn:hover, .calDiv__dropdownBtn--shadow):hover {
+
+:where(.calDiv_btn:hover, .calDiv_dropdownBtn--shadow):hover {
   background-color: rgba(131, 131, 131, 0.35);
   transition: 0.5s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.31rem 0.5rem;
   border-radius: 0;
 }
+
 .calDiv__dropdownBtn--size {
   width: 3.9rem;
   height: 2.6rem;
   margin: 0.15rem 0.15rem;
 }
+
 .calDiv__btn--blue {
   background-color: #6690ce !important;
+  color: #1a1a1a;
+  border: none;
 }
+
 .calDiv__btn--blue:hover {
   background-color: #4b6da0;
   box-shadow: #6690ce 0rem 0.31rem 0.94rem;
 }
+
 .calDiv__removeImg--size {
   width: 1.5rem;
 }
-.calDiv__removeImg--size {
-  width: 1.5rem;
-}
+
 .calDiv__trigonoImg--size {
   transform: rotate(270deg);
   width: 1.1rem;
 }
+
 .calDiv__arrowDownImg--size {
   width: 0.7rem;
 }
+
 .calDiv__inputField {
-  height: 7rem;
+  height: 6.5rem; /* slightly reduced to give space for heading */
   font-size: 2.4rem;
   margin-top: 1rem;
   text-align: right;
@@ -65,10 +91,16 @@
   border: none;
   resize: none;
   background-color: #f8f9fa !important;
+  color: #212121;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
 .calDiv__fnImg--size {
   width: 1.2rem;
 }
+
 .calDiv_drawer {
   position: absolute;
   height: 26rem;
@@ -80,36 +112,47 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0.1rem 0.03rem 0.31rem;
   display: none;
 }
+
 .calDiv__closeBtn--color {
   background-color: #f8f9fa;
 }
+
 .calDiv__closeImg--size {
   width: 1.2rem;
 }
+
 .calDiv__deleteBtnDiv {
   position: absolute;
   top: calc(100% - 3.2rem);
   right: 0.2rem;
 }
+
 .calDiv__deleteBtn--color {
   padding: 0.2rem;
   background-color: #f8f9fa;
+  border: none;
 }
+
 .calDiv__deleteImg--size {
   width: 1.3rem;
   height: 1.3rem;
 }
+
 .calDiv__numsDiv {
   margin-top: 0.5rem;
   max-height: 72%;
   overflow: hidden;
   overflow-y: scroll;
-}
-.calDiv__ErrMsgDiv {
-  text-align: justify;
+  padding-right: 0.2rem;
 }
 
-/* responsive media queries */
+.calDiv__ErrMsgDiv {
+  text-align: justify;
+  font-size: 0.875rem;
+  color: #d32f2f;
+}
+
+/* Responsive styles */
 @media only screen and (max-width: 415px), (max-height: 600px) {
   * {
     font-size: 14px;
