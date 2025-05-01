@@ -1,7 +1,7 @@
 
 # Scientific Calculator
 
-Live
+Live:
 https://smart-calci.vercel.app/
 
 
